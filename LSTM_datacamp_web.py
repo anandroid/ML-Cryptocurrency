@@ -58,7 +58,7 @@ else:
     # ====================== Loading Data from Kaggle ==================================
     # You will be using HP's data. Feel free to experiment with other data.
     # But while doing so, be careful to have a large enough dataset and also pay attention to the data normalization
-    df = pd.read_csv(os.path.join('Stocks','hpq.us.txt'),delimiter=',',usecols=['Date','Open','High','Low','Close'])
+    df = pd.read_csv(os.path.join('Stocks','bnb_price.csv'),delimiter=',',usecols=['Date','Open','High','Low','Close'])
     print('Loaded data from the Kaggle repository')
 
     # Sort DataFrame by date
@@ -461,7 +461,7 @@ for ep in range(epochs):
       predictions_over_time.append(predictions_seq)
       print('\tFinished Predictions')
 
-        best_prediction_epoch = 28 # replace this with the epoch that you got the best results when running the plotting code
+      best_prediction_epoch = 28 # replace this with the epoch that you got the best results when running the plotting code
 
 plt.figure(figsize = (18,18))
 plt.subplot(2,1,1)
