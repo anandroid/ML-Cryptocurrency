@@ -19,7 +19,7 @@ conn.close()
 group = df.groupby('time')
 Real_Price = group['sell_for'].mean()
 prediction_count = 10
-df_train = Real_Price[:len(Real_Price) - prediction_count-1000]
+df_train = Real_Price[:len(Real_Price) - prediction_count]
 df_test = Real_Price[len(Real_Price) - prediction_count:]
 training_set = df_train.values
 training_set = np.reshape(training_set, (len(training_set), 1))
