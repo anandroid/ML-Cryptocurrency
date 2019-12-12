@@ -59,19 +59,14 @@ y_compare = np.vstack((y_test,y_pred)).T
 y_compare[:5,:]
 
 
-cm = confusion_matrix(y_test, y_pred)
-print(cm)
+wrong_prediction = 0
 
-a = cm.shape
-corrPred = 0
-falsePred = 0
+for loop_index in range(len(y_test)):
+   if y[len(y_train)-1+loop_index] != y_test[loop_index]:
+       if y[len(y_train)-1+loop_index] == "SELL":
+           wrong_prediction = wrong_prediction+1
 
-for row in range(a[0]):
-    for c in range(a[1]):
-        if row == c:
-            corrPred +=cm[row,c]
-        else:
-            falsePred += cm[row,c]
-print('Correct predictions: ', corrPred)
-print('False predictions', falsePred)
-print ('\n\nAccuracy of the Naive Bayes Clasification is: ', corrPred/(cm.sum()))
+
+
+
+print ('\n Loss with Naive Bayes Clasification is: ', (wrong_prediction/len(y_test))*100 )
