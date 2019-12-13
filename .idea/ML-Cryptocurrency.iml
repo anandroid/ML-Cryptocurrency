@@ -4,9 +4,20 @@
     <content url="file://$MODULE_DIR$" />
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+<<<<<<< HEAD
   </component>
   <component name="TestRunnerService">
     <option name="projectConfiguration" value="pytest" />
     <option name="PROJECT_TEST_RUNNER" value="pytest" />
+=======
+    <orderEntry type="library" name="R Skeletons" level="application" />
+    <orderEntry type="library" name="R User Library" level="project" />
+  </component>
+  <component name="PyDocumentationSettings">
+    <option name="renderExternalDocumentation" value="true" />
+  </component>
+  <component name="TestRunnerService">
+    <option name="PROJECT_TEST_RUNNER" value="Unittests" />
+>>>>>>> 2c7eec9cc06bcd0e5bf7ed17441157bdc671c0f4
   </component>
 </module>
